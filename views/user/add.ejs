@@ -1,0 +1,26 @@
+<%- include ../layouts/header.ejs %>
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %><% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/user/add" method="post" name="form1">
+	<table width="25%" border="0">
+		<tr>
+			<td>Start Date</td>
+			<td><input type="text" name="start_date" id="start_date" value="<%= start_date %>" /></td>		</tr>		<tr>
+			<td>End Date</td>
+			<td><input type="text" name="end_date" value="<%= end_date %>" /></td>
+		</tr>		<tr>
+			<td>Event</td>
+			<td><input type="text" name="event" value="<%= event %>" /></td>
+		</tr>		<tr>
+			<td></td>
+			<td><input type="submit" name="Submit" value="Add" /></td>
+		</tr>	</table></form><!--
+	including footer content which is common for all pages
+-->
+
+<%- include ../layouts/footer.ejs %>

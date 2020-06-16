@@ -1,0 +1,6 @@
+create database test;
+use test;
+CREATE TABLE `my_schedule` (`id` bigint(20) unsigned AUTO_INCREMENT, `start_date` datetime NOT NULL, `end_date` datetime NOT NULL, `event` varchar(255) NOT NULL, PRIMARY KEY (`id`)) DEFAULT CHARSET=utf8;
+SET time_zone = "+8:00";
+insert into my_schedule(event, start_date, end_date) values('Today', now(), now());
+commit;
